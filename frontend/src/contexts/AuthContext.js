@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost:8000/auth/me/", {
+        const res = await fetch("http://54.173.153.68:8000/auth/me/", {
           method: "GET",
           credentials: "include",
         });
@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async ({ username, password }) => {
     try {
-      const response = await fetch("http://localhost:8000/auth/login/", {
+      const response = await fetch("http://54.173.153.68:8000/auth/login/", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await fetch("http://localhost:8000/auth/logout/", {
+    await fetch("http://54.173.153.68:8000/auth/logout/", {
       method: "POST",
       credentials: "include",
       headers: { 
